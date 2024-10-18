@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда A-Frame Домов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        .main-section {
+            padding: 40px;
+            text-align: center;
+        }
+        .main-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .main-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .main-section button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .main-section button:hover {
+            background-color: #45a049;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .reviews {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .review {
+            margin-bottom: 20px;
+        }
+        .review h3 {
+            margin: 10px 0;
+        }
+        .review p {
+            font-style: italic;
+            color: #555;
+        }
+        .booking-form {
+            background-color: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .booking-form button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Аренда A-Frame Домов</h1>
+    <p>Уютные домики в живописных местах для вашего идеального отдыха</p>
+</header>
+
+<nav>
+    <a href="#about">О нас</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#booking">Бронирование</a>
+</nav>
+
+<section class="main-section" id="about">
+    <h1>Добро пожаловать!</h1>
+    <p>Наслаждайтесь отдыхом в уникальных A-frame домиках, которые сочетают стильный дизайн и комфорт. Идеальные места для уединения на природе или веселого семейного отдыха.</p>
+    <button onclick="document.getElementById('booking').scrollIntoView()">Забронировать сейчас</button>
+</section>
+
+<section class="gallery" id="gallery">
+    <img src="a-frame1.jpg" alt="A-Frame дом 1">
+    <img src="a-frame2.jpg" alt="A-Frame дом 2">
+    <img src="a-frame3.jpg" alt="A-Frame дом 3">
+    <img src="a-frame4.jpg" alt="A-Frame дом 4">
+</section>
+
+<section class="reviews" id="reviews">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="review">
+        <h3>Анна</h3>
+        <p>"Отличное место для отдыха! Всё было на высшем уровне, домик уютный, чистый, с красивыми видами."</p>
+    </div>
+    <div class="review">
+        <h3>Максим</h3>
+        <p>"Наша семья прекрасно провела время. Всем советуем этот домик для спокойного отдыха на природе."</p>
+    </div>
+    <div class="review">
+        <h3>Екатерина</h3>
+        <p>"Классное место для романтического уикенда. В домике есть всё, что нужно для уединённого отдыха."</p>
+    </div>
+</section>
+
+<section class="booking-form" id="booking">
+    <h2>Форма для бронирования</h2>
+    <form action="#">
+        <input type="text" placeholder="Ваше имя" required><br>
+        <input type="email" placeholder="Ваш Email" required><br>
+        <input type="tel" placeholder="Ваш телефон" required><br>
+        <select required>
+            <option value="" disabled selected>Выберите домик</option>
+            <option value="a-frame1">A-Frame дом 1</option>
+            <option value="a-frame2">A-Frame дом 2</option>
+            <option value="a-frame3">A-Frame дом 3</option>
+        </select><br>
+        <textarea rows="5" placeholder="Дополнительные пожелания"></textarea><br>
+        <button type="submit">Отправить заявку</button>
+    </form>
+</section>
+
+<footer>
+    <p>Контакты: +7 (999) 123-45-67 | info@aframe-doma.ru</p>
+    <p>© 2024 Аренда A-Frame Домов. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
